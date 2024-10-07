@@ -11,11 +11,11 @@ class VendorMachine {
 
   public buySnacks(): void {
     this.isOn = true;
-    this.money = +2;
     if (this.snacksQty < 1) {
       throw new Error("machine vide !");
     }
     this.snacksQty = -1;
+    this.money = +2;
   }
 
   public reset(): void {
@@ -43,4 +43,4 @@ const vendorMachine = new VendorMachine();
 
 vendorMachine.reset();
 vendorMachine.shootWithFoot();
-vendorMachine.buySnacks;
+vendorMachine.buySnacks();
