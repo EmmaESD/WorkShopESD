@@ -3,6 +3,12 @@ class VendorMachine {
   private snacksQty: number;
   private money: number;
 
+  public constructor() {
+    this.isOn = false;
+    this.snacksQty = 50;
+    this.money = 0;
+  }
+
   public buySnacks(): void {
     this.isOn = true;
     this.money = +2;
