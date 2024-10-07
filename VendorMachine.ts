@@ -1,7 +1,7 @@
 class VendorMachine {
-  private isOn;
-  private snacksQty;
-  private money;
+  private isOn: boolean;
+  private snacksQty: number;
+  private money: number;
 
   public buySnacks() {
     this.isOn = true;
