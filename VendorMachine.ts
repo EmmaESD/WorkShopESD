@@ -12,6 +12,9 @@ class VendorMachine {
   public buySnacks(): void {
     this.isOn = true;
     this.money = +2;
+    if (this.snacksQty < 1) {
+      throw new Error("machine vide !");
+    }
     this.snacksQty = -1;
   }
 
@@ -23,9 +26,16 @@ class VendorMachine {
   }
 
   public shootWithFoot(): void {
+    if (this.snacksQty < 5) {
+      throw new Error("bien essayé, il n'y a plus rien !");
+    }
     this.snacksQty = -5;
-    this.money = -20;
     this.isOn = false;
+
+    if (this.money < 20) {
+      throw new Error("bien essayé, il n'y a plus d'argent !");
+    }
+    this.money = -20;
   }
 }
 
