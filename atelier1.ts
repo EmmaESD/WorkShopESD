@@ -13,6 +13,7 @@ class VendorMachine {
     this.isOn = false;
     this.snacksQty = +50;
     this.money = 0;
+    this.isOn = true;
   }
 
   public shootWithFoot() {
